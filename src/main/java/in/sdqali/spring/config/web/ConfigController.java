@@ -41,4 +41,11 @@ public class ConfigController {
   public Map<String, List<String>> listmap() {
     return applicationConfig.getListmap();
   }
+
+  @RequestMapping(method = GET,
+      path = "/maplistmap",
+      produces = APPLICATION_JSON_VALUE)
+  public Map<String, List<Map<String, String>>> maplistmap() {
+    return applicationConfig.getMaplistmap();
+  }
 }
